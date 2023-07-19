@@ -1,0 +1,88 @@
+Types of method in java 
+  -> Instance Method.
+  -> Staic Method.
+  -> Instance Factory Method.
+  -> Abstract Method.
+
+
+Method calling in java.
+
+  Insatance -- directly/obj--> Instance method.
+  Insatance -- className--> static method.
+  Static   -- directly/obj--> Static method.
+  Static   --Object--> Instance Method.
+
+-------------------------------------------  Code  --------------------------------------------------------------------
+
+class HelloWorld {
+    public static void main(String[] args) {
+
+//👉  static --drectly-->static method
+        print();
+
+//👉   static --object--> instance method.
+
+        HelloWorld obj=new HelloWorld();
+        obj.print1();
+    }
+    
+    static void print(){
+        System.out.println("Hello how are you");
+    }
+    void print1(){
+        System.out.println("I am fine what about you");
+
+//👉  instance --directly-->instance method
+        print2();
+    }
+    void print2(){
+        System.out.println("I am also good");
+//👉  instance --className-->static method
+        HelloWorld.print3();
+    }
+    
+    static void print3(){
+        System.out.println("So what is the plan now");
+    }
+}
+
+
+Blocks in java.
+  ->Instance Block.-- Instance block is used to initialize instance variables.
+  ->Static Block.--- Static block is also used to initialize variables and is excuted before main method.
+
+Constructor 
+  -> It is a special method in java use to initialize objects.
+  ->  By default it is implicitly Called at the time of object creation.
+  -> It can called explicilty also that is by programmer at run time.
+  -> It can be Parametrized or non-paramerized.
+  -> this key word is used for constructor chaining. For constructor chaining this keyword must be the first statement in constructor.
+  -> Constructor can also be private ,private constructor can be excess within the class. To excess private constructor by another class we have to use static factory method.
+
+-------------------------------------------  Code  --------------------------------------------------------------------
+
+class constructor{
+//👉 Default constructor
+    constructor(){
+        System.out.print("Hi");
+    }
+//👉 Parametrized Constructor
+    constructor(int a){
+        this(); //🎯constructor chaining
+        System.out.print(a);
+    }
+//👉 Instance Block 
+    {
+        System.out.print("Mi");
+    }
+//👉 Static Block
+    static{
+        System.out.print("SBlock");
+    }
+    public static void main(String args[]){
+        
+        constructor obj2=new constructor(100);
+    }
+}
+
+OOP's 
