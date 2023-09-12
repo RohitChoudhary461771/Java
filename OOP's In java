@@ -1,26 +1,26 @@
-Types of method in java 
-  -> Instance Method / Non static method.
-  -> Staic Method.
-  -> Instance Factory Method.
-  -> Abstract Method.
+⭕ Types of method in java 
+      -> Instance Method / Non static method.
+      -> Staic Method.
+      -> Instance Factory Method.
+      -> Abstract Method.
 
 
 Method calling in java.
 
-  Insatance -- directly/obj--> Instance method.
-  Insatance -- className--> static method.
-  Static   -- directly/obj--> Static method.
-  Static   --Object--> Instance Method.
+      Insatance -- directly/obj--> Instance method.
+      Insatance -- className--> static method.
+      Static   -- directly/obj--> Static method.
+      Static   --Object--> Instance Method.
 
 -------------------------------------------  Code  --------------------------------------------------------------------
 
 class HelloWorld {
     public static void main(String[] args) {
 
-  //👉  static --drectly-->static method
+      //👉  static --drectly-->static method
         print();
 
-  //👉   static --object--> instance method.
+      //👉   static --object--> instance method.
 
         HelloWorld obj=new HelloWorld();
         obj.print1();
@@ -76,20 +76,20 @@ class HelloWorld {
 
 **************************X*********************************************************X************************************
 
-Blocks in java.
-  ->Instance Block.-- Instance block is used to initialize instance variables.
-  ->Static Block.--- Static block is also used to initialize variables and is excuted before main method.
+⭕ Blocks in java.
+      ->Instance Block.-- Instance block is used to initialize instance variables.
+      ->Static Block.--- Static block is also used to initialize variables and is excuted before main method.
 
 **************************X*********************************************************X************************************
 
-Constructor 
-  -> It is a special method in java use to initialize objects.
-  -> By default it is implicitly Called at the time of object creation.
-  -> It can called explicilty also that is by programmer at run time.
-  -> It can be Parametrized or non-paramerized.
-  -> this key word is used for constructor chaining. For constructor chaining this keyword must be the first statement in constructor.
-  -> Constructor can also be private ,private constructor can be excess within the class. To excess private constructor by another class
-      we have to use static factory method /instance fatory method
+⭕ Constructor 
+      -> It is a special method in java use to initialize objects.
+      -> By default it is implicitly Called at the time of object creation.
+      -> It can called explicilty also that is by programmer at run time.
+      -> It can be Parametrized or non-paramerized.
+      -> this key word is used for constructor chaining. For constructor chaining this keyword must be the first statement in constructor.
+      -> Constructor can also be private ,private constructor can be excess within the class. To excess private constructor by another class
+          we have to use static factory method /instance fatory method
 
 -------------------------------------------  Code  --------------------------------------------------------------------
 
@@ -116,5 +116,37 @@ class constructor{
         constructor obj2=new constructor(100);
     }
 }
+-------------------------------------------------------------------------------------------------------------------------
 
-OOP's 
+⭕ OOP's (Object Oriented programming)
+    --> Java is not a pure object orinteted programming language because of the presence of Primitive data type(8)
+      (int,float,char,boolean,double,byte,short,long)
+
+    --> four pillar's of OOP's.
+        --> Inheritance
+        --> Polymorphism.
+        --> Encapsulation.
+        --> Abstraction.
+
+-------------------------  Inheritance -------------------------------------------------------------------
+
+🔹Inheritance is a property in which one class can aquire all the property of another class.
+  Inheritance also called (IS-A) realtion.
+
+      [class] -->parent/super/base
+        ⩑
+        |        (child class inheriting all the property of parent class)
+        |
+      [class}  --> child/sub/Derived class
+
+  Types of Inheritance
+    1.Single inheritance.
+    2.Hierarchichal inheritance.
+    3.Multiple iheritance. (not supported in java)
+    4.Hybrid Inheritance.  (not supported in java)
+    5.Multilevel Inheritance
+
+
+
+
+
