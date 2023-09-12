@@ -1,5 +1,5 @@
 Types of method in java 
-  -> Instance Method.
+  -> Instance Method / Non static method.
   -> Staic Method.
   -> Instance Factory Method.
   -> Abstract Method.
@@ -17,10 +17,10 @@ Method calling in java.
 class HelloWorld {
     public static void main(String[] args) {
 
-//👉  static --drectly-->static method
+  //👉  static --drectly-->static method
         print();
 
-//👉   static --object--> instance method.
+  //👉   static --object--> instance method.
 
         HelloWorld obj=new HelloWorld();
         obj.print1();
@@ -29,15 +29,18 @@ class HelloWorld {
     static void print(){
         System.out.println("Hello how are you");
     }
+
     void print1(){
         System.out.println("I am fine what about you");
 
-//👉  instance --directly-->instance method
+  //👉  instance --directly-->instance method
         print2();
     }
+
     void print2(){
         System.out.println("I am also good");
-//👉  instance --className-->static method
+
+  //👉  instance --className-->static method
         HelloWorld.print3();
     }
     
@@ -46,18 +49,47 @@ class HelloWorld {
     }
 }
 
+************************Detail code for static method calling ********************************************
+class HelloWorld {
+    public static void main(String[] args) {
+       //👉static method direct calling.
+        int ans=Add(8,9);
+    
+      //👉static method  calling using object.
+    
+        HelloWorld obj1 =new HelloWorld();
+        int ans1=obj1.Add(9,9);
+    
+      //👉static method  calling using class name.
+
+        int ans2=HelloWorld.Add(10,9);
+        
+        System.out.println(ans2);
+    }
+
+//Method 
+    static int Add(int a ,int b){
+        int c=a+b;
+        return c;
+    }
+}
+
+**************************X*********************************************************X************************************
 
 Blocks in java.
   ->Instance Block.-- Instance block is used to initialize instance variables.
   ->Static Block.--- Static block is also used to initialize variables and is excuted before main method.
 
+**************************X*********************************************************X************************************
+
 Constructor 
   -> It is a special method in java use to initialize objects.
-  ->  By default it is implicitly Called at the time of object creation.
+  -> By default it is implicitly Called at the time of object creation.
   -> It can called explicilty also that is by programmer at run time.
   -> It can be Parametrized or non-paramerized.
   -> this key word is used for constructor chaining. For constructor chaining this keyword must be the first statement in constructor.
-  -> Constructor can also be private ,private constructor can be excess within the class. To excess private constructor by another class we have to use static factory method.
+  -> Constructor can also be private ,private constructor can be excess within the class. To excess private constructor by another class
+      we have to use static factory method /instance fatory method
 
 -------------------------------------------  Code  --------------------------------------------------------------------
 
@@ -68,7 +100,7 @@ class constructor{
     }
 //👉 Parametrized Constructor
     constructor(int a){
-        this(); //🎯constructor chaining
+        this(); //🎯constructor chaining,call above constructor (⬆) first 
         System.out.print(a);
     }
 //👉 Instance Block 
