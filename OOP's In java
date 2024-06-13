@@ -147,6 +147,33 @@ class constructor{
     5.Multilevel Inheritance
 
 
+************************Constructor calling inheritance ********************************************
+      B
+      ⩑
+      |
+      |
+      A
+class A extends B{
+    A(){
+        super();//For calling parent class constructor.Must be he first line.
+    }
+    void show(int a){
+       System.out.println("Hi!!! "); 
+    }
+    public static void main(String[] args){
+        A obj1=new A();
+        obj1.show(10);//method is over rided in child class.
+    }
+}
+
+class B{
+    B(){
+       System.out.println("Hi!! "); 
+    }
+    void show(int a){
+        System.out.println("Hi!! ");
+    }
+}
 
 
 
